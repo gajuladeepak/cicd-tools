@@ -55,7 +55,7 @@ module "records" {
     {
       name    = "jenkins"
       type    = "A"
-      ttl     = 1
+      ttl     = 1t
       records = [
         module.jenkins.public_ip
       ]
