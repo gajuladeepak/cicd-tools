@@ -7,7 +7,7 @@ module "jenkins" {
   instance_type          = "t3.small"
   vpc_security_group_ids = ["sg-0259ab198f99e2d9b"] #replace your SG
   subnet_id = "subnet-0027fc32eb7b40f07" #replace your Subnet
-  availability_zone = "us-east-1a"
+  availability_zone = "us-east-1e"
   ami = data.aws_ami.ami_info.id
   user_data = file("jenkins.sh")
   tags = {
@@ -32,7 +32,7 @@ module "jenkins_agent" {
   instance_type          = "t3.small"
   vpc_security_group_ids = ["sg-0259ab198f99e2d9b"]
   subnet_id = "subnet-0027fc32eb7b40f07"
-  availability_zone = "us-east-1a"
+  availability_zone = "us-east-1e"
   ami = data.aws_ami.ami_info.id
   user_data = file("jenkins-agent.sh")
   tags = {
