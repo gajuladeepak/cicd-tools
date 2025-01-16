@@ -1,3 +1,4 @@
+
 module "jenkins" {
   source  = "terraform-aws-modules/ec2-instance/aws"
 
@@ -55,7 +56,7 @@ module "records" {
     {
       name    = "jenkins"
       type    = "A"
-      ttl     = 1t
+      ttl     = 1
       records = [
         module.jenkins.public_ip
       ]
